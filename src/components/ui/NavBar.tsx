@@ -121,7 +121,7 @@ const NavBar = () => {
             <div className="hidden md:flex items-center space-x-2">
               <button className="flex items-center space-x-1 px-3 py-1.5 rounded-full bg-purple-600/20 border border-purple-500/30 text-white/90 hover:bg-purple-600/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 text-xs">
                 <FaUser className="w-3 h-3" />
-                <span className="font-medium">REGISTER</span>
+                <span className="font-medium font">REGISTER</span>
               </button>
 
               <button className="flex items-center space-x-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 text-xs">

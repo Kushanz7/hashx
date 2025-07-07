@@ -1,4 +1,6 @@
 import Hero from './components/sections/HeroSection'
+import PartnershipsSection from './components/sections/PartnershipsSection'
+import StatsSection from './components/sections/StatsSection'
 import NavBar from './components/ui/NavBar'
 
 function App() {
@@ -8,7 +10,8 @@ function App() {
       <div>
         <NavBar />
         <Hero />
-        <Hero />
+        <PartnershipsSection />
+        <StatsSection />
       </div>
     </>
   )

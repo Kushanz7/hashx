@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'tektur': ['Tektur', 'monospace'],
         'general': ['General Sans', 'sans-serif'],
         'circular-web': ['circular-web', 'sans-serif'],
         'robert-medium': ['robert-medium', 'sans-serif'],
