@@ -44,8 +44,8 @@ const events = [
 ];
 
 const SliderRow = ({ items, title, speed = 40 }: { items: any[], title: string, speed?: number }) => (
-  <div className="mb-16">
-    <h3 className="text-xl md:text-2xl font-bold text-purple-300 text-center mb-8 tracking-wider">
+  <div className="mb-12">
+    <h3 className="text-l md:text-l font-bold text-purple-300 text-center mb-2 tracking-wider">
       {title}
     </h3>
     <div className="relative">
@@ -95,8 +95,8 @@ const SliderRow = ({ items, title, speed = 40 }: { items: any[], title: string, 
 
 const PartnershipsSection = () => {
   return (
-    <section className="py-8 bg-black/50 overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center mb-16">
+    <section className="pb-8 bg-black/50 overflow-hidden">
+      <div className="max-w-6xl mx-auto text-center mb-6">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-4">
           OUR PARTNERSHIPS
         </h2>
@@ -105,7 +105,7 @@ const PartnershipsSection = () => {
         </p>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-2">
         <SliderRow items={partners} title="INSTITUTIONS" speed={40} />
         <SliderRow items={companies} title="COMPANIES" speed={45} />
         <SliderRow items={events} title="EVENTS" speed={35} />

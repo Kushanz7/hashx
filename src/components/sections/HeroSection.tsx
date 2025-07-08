@@ -1,11 +1,10 @@
-import {Button} from "@heroui/react";
-import { FaCode, FaPlay, FaFlag } from "react-icons/fa";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import logoHashX from "../../assets/logo_hashx.png";
+import Button from "../ui/Button";
 
 const Hero = () => {
   return (
-    <div className="pt-3 bg-black-100 min-h-screen relative">
+    <div className="pt-3 bg-black-100 relative mb-8">
       {/* Blurred purple background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-600/30 rounded-full blur-3xl"></div>
@@ -35,7 +34,7 @@ const Hero = () => {
        *  0.2 to 0.03
        */}
       <div
-        className="h-screen w-full bg-black/50 bg-grid-black-100/[0.02] 
+        className="h-full w-full bg-black/50 bg-grid-black-100/[0.02] 
        absolute top-0 left-0 flex items-center justify-center"
       >
         {/* Radial gradient for the container to give a faded look */}
@@ -45,7 +44,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="font-general flex justify-center relative my-20 z-10">
+      <div className="font-general flex justify-center relative mt-20 z-10">
         <div className="max-w-[95vw] md:max-w-4xl lg:max-w-6xl flex flex-col items-center justify-center">
          
           {/* HashX Logo */}
@@ -57,11 +56,6 @@ const Hero = () => {
             />
           </div>
 
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
           <TextGenerateEffect
             words="Sri Lanka's #1 CTF Platform"
             className="text-center text-[40px] md:text-5xl lg:text-6xl text-white mb-4 font-tektur"
@@ -72,25 +66,10 @@ const Hero = () => {
           </p>
 
           <a href="#ctf">
-            <Button
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 active:scale-95 group relative overflow-hidden"
-              radius="full"
-              size="lg"
-            >
-              {/* Code icon with upward movement animation */}
-              <div className="relative mr-2 w-4 h-4 overflow-hidden">
-                <FaCode className="absolute transition-all duration-500 group-hover:animate-bounce-up" />
-                <FaCode className="absolute opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:animate-bounce-up-delay transition-all duration-500" />
-              </div>
-              
-              <span className="group-hover:tracking-wider transition-all duration-300">Play CTF</span>
-              
-              {/* Play button transforms to flag */}
-              <div className="relative ml-2 w-4 h-4">
-                <FaPlay className="absolute transition-all duration-300 group-hover:opacity-0 group-hover:scale-0 group-hover:translate-x-1" />
-                <FaFlag className="absolute opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100" />
-              </div>
-            </Button>
+            <Button 
+              title="Play CTF" 
+              containerClass="mt-2 mb-6 cursor-pointer bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600 hover:from-purple-700 hover:via-purple-600 hover:to-blue-700 text-white shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group relative overflow-hidden"
+            />
           </a>
         </div>
       </div>
