@@ -1,0 +1,227 @@
+import { useEffect, useRef, useState } from 'react';
+import  ProfileCard from '../components/ui/Card'; // Make sure this is the correct import
+import { FaCode, FaShieldAlt, FaUsers, FaHeart } from 'react-icons/fa';
+import { topManagement, technicalTeam } from '../data/teamData';
+import { stats } from '../data/statsData';
+import { values } from '../data/valuesData';
+
+const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
+      {/* Hero Section */}
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text mt-17 mb-8 leading-tight">
+              EMPOWERING THE
+              <br />
+              <span className="text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text">
+                NEXT GENERATION
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+              HashX is Sri Lanka's premier cybersecurity platform, dedicated to advancing 
+              <span className="text-purple-400 font-semibold"> security education</span> through 
+              hands-on challenges and <span className="text-blue-400 font-semibold">collaborative learning</span>.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="flex items-center justify-center mb-2 text-purple-400">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-black text-white mb-1">{stat.number}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-6">
+                Our Vision
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                We evolve into an acknowledged technology laboratory for cyber defense, crafting advanced solutions to halt, neutralize, and eliminate organized enemy attacks.
+              </p>
+              <h2 className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                We enhance the security of the digital space by employing integrated systems for both cyber security and cyber defense, effectively countering sophisticated threats. This effort contributes to overall security enhancement for everyone involved.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl blur-xl" />
+              <div className="relative bg-gradient-to-br from-gray-900/80 to-black/60 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
+                <div className="grid grid-cols-2 gap-6">
+                  {values.map((value, index) => (
+                    <div key={index} className="text-center">
+                      <div className="flex items-center justify-center mb-3 text-purple-400">
+                        {value.icon}
+                      </div>
+                      <h3 className="text-white font-bold mb-2">{value.title}</h3>
+                      <p className="text-gray-400 text-sm">{value.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section ref={sectionRef} className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-full mb-8 backdrop-blur-sm">
+              <FaUsers className="text-purple-400" />
+              <span className="text-purple-300 font-semibold tracking-wider">OUR TEAM</span>
+              <FaHeart className="text-pink-400" />
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text mb-6 leading-tight">
+              MEET THE
+              <br />
+              <span className="text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text">
+                MASTERMINDS
+              </span>
+            </h2>
+            
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Our diverse team of security experts, developers, and educators are passionate about 
+              <span className="text-purple-400 font-semibold"> sharing knowledge</span> and 
+              <span className="text-blue-400 font-semibold"> building community</span>.
+            </p>
+          </div>
+
+          {/* Top Management */}
+          <div className={`mb-16 transition-all duration-1200 delay-300 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          }`}>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text mb-2">
+                🏆 LEADERSHIP TEAM
+              </h3>
+              <div className="h-1 w-32 mx-auto bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {topManagement.map((member, index) => (
+                <div
+                  key={index}
+                  className="transition-all duration-300 ease-out"
+                  style={{
+                    animationDelay: `${index * 0.2}s`,
+                  }}
+                >
+                  <ProfileCard
+                    name={member.name}
+                    position={member.position}
+                    image={member.image}
+                    verified={member.verified}
+                    socialLinks={member.socialLinks}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Technical Team */}
+          <div className={`transition-all duration-1200 delay-500 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          }`}>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-2">
+                💻 TECHNICAL TEAM
+              </h3>
+              <div className="h-1 w-32 mx-auto bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {technicalTeam.map((member, index) => (
+                <div
+                  key={index}
+                  className="transition-all duration-300 ease-out"
+                  style={{
+                    animationDelay: `${(index + 2) * 0.1}s`,
+                  }}
+                >
+                  <ProfileCard
+                    name={member.name}
+                    position={member.position}
+                    image={member.image}
+                    verified={member.verified}
+                    socialLinks={member.socialLinks}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-transparent to-purple-900/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-6">
+            Get In Touch
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            Have questions about HashX or want to collaborate? We'd love to hear from you!
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 hover:scale-105 transform">
+              Contact Us
+            </button>
+            <button className="px-8 py-4 bg-transparent border-2 border-purple-500/50 text-purple-300 font-bold rounded-xl hover:bg-purple-600/20 hover:border-purple-400 transition-all duration-300 hover:scale-105 transform">
+              Join Community
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default About;
