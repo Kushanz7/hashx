@@ -1,5 +1,5 @@
 import {Button} from "@heroui/react";
-import { FaCode, FaPlay } from "react-icons/fa";
+import { FaCode, FaPlay, FaFlag } from "react-icons/fa";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import logoHashX from "../../assets/logo_hashx.png";
 
@@ -73,13 +73,23 @@ const Hero = () => {
 
           <a href="#ctf">
             <Button
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 active:scale-95 group"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 active:scale-95 group relative overflow-hidden"
               radius="full"
               size="lg"
             >
-              <FaCode className="mr-2 group-hover:rotate-12 transition-transform duration-300" />
+              {/* Code icon with upward movement animation */}
+              <div className="relative mr-2 w-4 h-4 overflow-hidden">
+                <FaCode className="absolute transition-all duration-500 group-hover:animate-bounce-up" />
+                <FaCode className="absolute opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 group-hover:animate-bounce-up-delay transition-all duration-500" />
+              </div>
+              
               <span className="group-hover:tracking-wider transition-all duration-300">Play CTF</span>
-              <FaPlay className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              
+              {/* Play button transforms to flag */}
+              <div className="relative ml-2 w-4 h-4">
+                <FaPlay className="absolute transition-all duration-300 group-hover:opacity-0 group-hover:scale-0 group-hover:translate-x-1" />
+                <FaFlag className="absolute opacity-0 scale-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100" />
+              </div>
             </Button>
           </a>
         </div>

@@ -95,7 +95,7 @@ const SliderRow = ({ items, title, speed = 40 }: { items: any[], title: string, 
 
 const PartnershipsSection = () => {
   return (
-    <section className="py-16 bg-black/50 overflow-hidden">
+    <section className="py-8 bg-black/50 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-4">
           OUR PARTNERSHIPS
