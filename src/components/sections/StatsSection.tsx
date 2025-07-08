@@ -26,7 +26,7 @@ const StatsSection = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
       
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        <h2 className="text-4xl md:text-4xl lg:text-6xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-4 tracking-tight">
+        <h2 className="text-2xl md:text-2xl lg:text-4xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-4 tracking-tight">
           OUR IMPACT
         </h2>
         <p className="text-lg md:text-xl text-purple-300/80 mb-16 font-medium max-w-2xl mx-auto">

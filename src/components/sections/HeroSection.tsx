@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="max-w-[95vw] md:max-w-4xl lg:max-w-6xl flex flex-col items-center justify-center">
          
           {/* HashX Logo */}
-          <div className="relative my-4">
+          <div className="relative mt-14 mb-4">
             <img 
               src={logoHashX} 
               alt="HashX Logo" 

@@ -170,10 +170,10 @@ const PartnershipsSection = () => {
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-8'
       }`}>
-        <h2 className="text-2xl md:text-2xl lg:text-4xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-4">
+        <h2 className="mt-4 text-2xl md:text-2xl lg:text-4xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-2">
           OUR PARTNERSHIPS
         </h2>
-        <p className="text-lg text-purple-300/80 font-medium">
+        <p className="mb-4 text-lg text-purple-300/80 font-medium">
           Collaborating with leading institutions, companies, and events
         </p>
       </div>
