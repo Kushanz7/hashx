@@ -1,24 +1,38 @@
 import { useEffect, useRef, useState } from 'react';
 
 // Import all partner logos
-import sliitLogo from '../../assets/slider/sliit.png';
-import nsbmLogo from '../../assets/slider/nsbm.png';
-import cicraLogo from '../../assets/slider/cicra.png';
-import uokLogo from '../../assets/slider/uok.png';
-import lnbLogo from '../../assets/slider/lnb.png';
+import sliitLogo from '../../assets/universities/sliit.png';
+import nsbmLogo from '../../assets/universities/nsbm.png';
+import cicraLogo from '../../assets/universities/cicra.png';
+import uokLogo from '../../assets/universities/uok.png';
+import lnbLogo from '../../assets/universities/lnb.png';
 
 // Import company logos (add these to your assets)
-import orelLogo from '../../assets/slider/sliit.png';
-import measaLogo from '../../assets/slider/sliit.png';
-import avisLogo from '../../assets/slider/sliit.png';
-import cybixLogo from '../../assets/slider/sliit.png';
-import allianzLogo from '../../assets/slider/sliit.png';
+import wad from '../../assets/companies/wad.png';
+import measaLogo from '../../assets/companies/measa.png';
+import avisLogo from '../../assets/companies/avis.png';
+import cybixLogo from '../../assets/companies/cybix.png';
+import allianzLogo from '../../assets/companies/allianz.png';
+import cert from '../../assets/companies/cert.png';
+import trischLogo from '../../assets/companies/trischel.png';
+import orelit from '../../assets/companies/orelit.png';
+import orelc from '../../assets/companies/orelcloud.png';
+import athlan from '../../assets/companies/athlan.png';
+import pwn from '../../assets/companies/pwn.png';
+import pwnu from '../../assets/companies/pwnu.png';
+import cy from '../../assets/companies/cy.png';
+import army from '../../assets/companies/army.png';
+import info from '../../assets/companies/Logos.png';
+
 
 // Import event logos (add these to your assets)
-import infotellLogo from '../../assets/slider/sliit.png';
-import cyberSecLogo from '../../assets/slider/sliit.png';
-import ncscLogo from '../../assets/slider/sliit.png';
-import isacaLogo from '../../assets/slider/sliit.png';
+import infotellLogo from '../../assets/events/infotel.png';
+import cyberSecLogo from '../../assets/events/csc.png';
+import ncscLogo from '../../assets/events/ncsc.png';
+import isacaLogo from '../../assets/events/isaca.png';
+import s from '../../assets/events/s.png';
+import ieee from '../../assets/events/ieee.png';
+import ncs from '../../assets/events/ncs.png';
 
 const partners = [
   { src: sliitLogo, alt: "SLIIT" },
@@ -29,11 +43,21 @@ const partners = [
 ];
 
 const companies = [
-  { src: orelLogo, alt: "OREL Group" },
+  { src: wad, alt: "OREL Group" },
   { src: measaLogo, alt: "MEASA" },
   { src: avisLogo, alt: "AVIS INC" },
   { src: cybixLogo, alt: "CYBIX Consulting" },
   { src: allianzLogo, alt: "Allianz" },
+  { src: cert, alt: "CERT" },
+  { src: trischLogo, alt: "Trischel" },
+  { src: orelit, alt: "OREL IT" },
+  { src: orelc, alt: "OREL Cloud" },
+  { src: athlan, alt: "Athlan" },
+  { src: pwn, alt: "PWN" },
+  { src: pwnu, alt: "PWN University" },
+  { src: cy, alt: "Cyber" },
+  { src: army, alt: "Army" },
+  { src: info, alt: "Info" }
 ];
 
 const events = [
@@ -41,6 +65,9 @@ const events = [
   { src: cyberSecLogo, alt: "CyberSecurity Club" },
   { src: ncscLogo, alt: "NCSC" },
   { src: isacaLogo, alt: "ISACA" },
+  { src: s, alt: "S" },
+  { src: ieee, alt: "IEEE" },
+  { src: ncs, alt: "NCS" }
 ];
 
 const SliderRow = ({ items, title, speed = 40, isVisible, reverse = false }: { 
