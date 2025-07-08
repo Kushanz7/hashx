@@ -65,12 +65,14 @@ const Hero = () => {
             HashX hosts Sri Lanka's #1 CTF platform, offering unparalleled hands-on experience with the latest cybersecurity challenges. We have successfully organized events for most major institutions, empowering participants with practical skills in a competitive environment. Join us to sharpen your expertise and stay ahead in the cybersecurity domain.
           </p>
 
-          <a href="#ctf">
-            <Button 
-              title="Play CTF" 
-              containerClass="mt-2 mb-4 cursor-pointer bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600 hover:from-purple-700 hover:via-purple-600 hover:to-blue-700 text-white shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group relative overflow-hidden"
-            />
-          </a>
+        <a href="#ctf">
+          <Button 
+            title={"</> Play CTF"}
+            containerClass="mt-2 mb-4 cursor-pointer bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600 hover:from-purple-700 hover:via-purple-600 hover:to-blue-700 text-white shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group relative overflow-hidden"
+          />
+        </a>
+
+
         </div>
       </div>
     </div>
