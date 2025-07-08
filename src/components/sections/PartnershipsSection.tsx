@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Import all partner logos
 import sliitLogo from '../../assets/slider/sliit.png';
@@ -43,9 +43,19 @@ const events = [
   { src: isacaLogo, alt: "ISACA" },
 ];
 
-const SliderRow = ({ items, title, speed = 40 }: { items: any[], title: string, speed?: number }) => (
-  <div className="mb-12">
-    <h3 className="text-l md:text-l font-bold text-purple-300 text-center mb-2 tracking-wider">
+const SliderRow = ({ items, title, speed = 40, isVisible, reverse = false }: { 
+  items: any[], 
+  title: string, 
+  speed?: number, 
+  isVisible: boolean,
+  reverse?: boolean 
+}) => (
+  <div className={`mb-12 transition-all duration-1000 ease-out ${
+    isVisible 
+      ? 'opacity-100 translate-y-0' 
+      : 'opacity-0 translate-y-8'
+  }`}>
+    <h3 className="text-sm md:text-l font-bold text-purple-300 text-center mb-2 tracking-wider">
       {title}
     </h3>
     <div className="relative">
@@ -55,10 +65,10 @@ const SliderRow = ({ items, title, speed = 40 }: { items: any[], title: string, 
       
       {/* Slider container */}
       <div 
-        className="flex gap-16 items-center"
+        className={`flex gap-16 items-center ${reverse ? 'animate-scroll-reverse' : 'animate-scroll'}`}
         style={{
           width: 'max-content',
-          animation: `scroll ${speed}s linear infinite`
+          animation: `${reverse ? 'scrollReverse' : 'scroll'} ${speed}s linear infinite`
         }}
       >
         {/* First set of logos */}
@@ -94,10 +104,46 @@ const SliderRow = ({ items, title, speed = 40 }: { items: any[], title: string, 
 );
 
 const PartnershipsSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '-50px 0px -50px 0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="pb-8 bg-black/50 overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center mb-6">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-4">
+    <section 
+      ref={sectionRef}
+      className={`pt-10 bg-black/50 overflow-hidden transition-all duration-1000 ease-out ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-12'
+      }`}
+    >
+      <div className={`max-w-6xl mx-auto text-center mb-6 transition-all duration-1200 delay-200 ease-out ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-8'
+      }`}>
+        <h2 className="text-2xl md:text-2xl lg:text-4xl font-black text-transparent bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text mb-4">
           OUR PARTNERSHIPS
         </h2>
         <p className="text-lg text-purple-300/80 font-medium">
@@ -106,9 +152,23 @@ const PartnershipsSection = () => {
       </div>
 
       <div className="space-y-2">
-        <SliderRow items={partners} title="INSTITUTIONS" speed={40} />
-        <SliderRow items={companies} title="COMPANIES" speed={45} />
-        <SliderRow items={events} title="EVENTS" speed={35} />
+        <div className={`transition-all duration-1000 delay-300 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <SliderRow items={partners} title="INSTITUTIONS" speed={40} isVisible={isVisible} />
+        </div>
+        
+        <div className={`transition-all duration-1000 delay-500 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <SliderRow items={companies} title="COMPANIES" speed={45} isVisible={isVisible} reverse={true} />
+        </div>
+        
+        <div className={`transition-all duration-1000 delay-700 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <SliderRow items={events} title="EVENTS" speed={35} isVisible={isVisible} />
+        </div>
       </div>
 
       <style>{`
@@ -121,7 +181,17 @@ const PartnershipsSection = () => {
           }
         }
         
-        .flex:hover {
+        @keyframes scrollReverse {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        
+        .animate-scroll:hover,
+        .animate-scroll-reverse:hover {
           animation-play-state: paused;
         }
       `}</style>
