@@ -4,36 +4,22 @@ This README showcases the main pages of our website through video screenshots an
 
 ## 🏠 Home Page
 
-Our home page provides visitors with a welcoming introduction to our company and services.
-
 ### Video Screenshot
-![Home Page Demo](./screenshots/home-page-demo.gif)
+https://github.com/user-attachments/assets/80750e9f-720c-4c91-a7ff-ba73269bf198
 
 *Alternative static screenshot:*
-![Home Page Screenshot](./screenshots/home-page.png)
-
-### Key Features
-- Hero section with compelling call-to-action
-- Services overview
-- Latest news and updates
-- Contact information
+![image](https://github.com/user-attachments/assets/53aec372-f5d1-468c-9230-3e52ffb34d51)
+![image](https://github.com/user-attachments/assets/e8ea3c4e-5964-4259-91cf-e8e1331777ce)
+![image](https://github.com/user-attachments/assets/0aa33829-4c71-4e16-83c0-987208badfc1)
+![image](https://github.com/user-attachments/assets/7197476b-6c30-4c5e-9d3d-aa16fe09e03a)
 
 ---
 
 ## 📖 About Us Page
 
-Learn more about our company's mission, vision, and values.
-
 ### Video Screenshot
-![About Us Page Demo](./screenshots/about-us-demo.gif)
+https://github.com/user-attachments/assets/6a4cb995-8dd0-4274-905a-b01f8796e54d
 
 *Alternative static screenshot:*
-![About Us Screenshot](./screenshots/about-us.png)
+![image](https://github.com/user-attachments/assets/413d99af-e8b5-4c7e-9ce1-f8520cf8fe79)
 
-### Content Highlights
-- Company history and background
-- Mission and vision statements
-- Core values and principles
-- Company achievements and milestones
-
----
