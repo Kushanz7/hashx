@@ -26,14 +26,17 @@ const About = () => {
       entries.forEach((entry) => {
         const target = entry.target;
         
-        if (target === heroRef.current) {
-          setIsHeroVisible(entry.isIntersecting);
-        } else if (target === missionRef.current) {
-          setIsMissionVisible(entry.isIntersecting);
-        } else if (target === teamRef.current) {
-          setIsTeamVisible(entry.isIntersecting);
-        } else if (target === contactRef.current) {
-          setIsContactVisible(entry.isIntersecting);
+        // Only set to true, never back to false (keeps elements visible once animated)
+        if (entry.isIntersecting) {
+          if (target === heroRef.current) {
+            setIsHeroVisible(true);
+          } else if (target === missionRef.current) {
+            setIsMissionVisible(true);
+          } else if (target === teamRef.current) {
+            setIsTeamVisible(true);
+          } else if (target === contactRef.current) {
+            setIsContactVisible(true);
+          }
         }
       });
     }, observerOptions);

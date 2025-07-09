@@ -18,39 +18,35 @@ export interface TeamMember {
 // Top Management Team
 export const topManagement: TeamMember[] = [
   {
-    name: "Alex Rodriguez",
+    name: "Avishka Bandara",
     position: "Director / CEO",
     image: alexImage,
     verified: false,
     socialLinks: [
       {
-          platform: 'linkedin', url: 'https://linkedin.com/in/alex',
+          platform: 'linkedin', url: 'https://www.linkedin.com/in/avishka-bandara/',
           type: undefined
       },
       {
-          platform: 'twitter', url: 'https://twitter.com/alex',
+          platform: 'twitter', url: 'https://twitter.com/',
           type: undefined
-      }
+      },
     ]
   },
   {
-    name: "Sarah Chen",
+    name: "Anuradha Ranaweera",
     position: "Managing Partner",
     image: alexImage,
     verified: false,
     socialLinks: [
       {
-          platform: 'linkedin', url: 'https://linkedin.com/in/sarah',
+          platform: 'linkedin', url: 'https://www.linkedin.com/in/anuradha-ranaweera',
           type: undefined
       },
       {
-          platform: 'github', url: 'https://github.com/sarah',
+          platform: 'twitter', url: 'https://twitter.com/',
           type: undefined
       },
-      {
-          platform: 'twitter', url: 'https://twitter.com/sarah',
-          type: undefined
-      }
     ]
   }
 ];
@@ -58,47 +54,39 @@ export const topManagement: TeamMember[] = [
 // Technical Team
 export const technicalTeam: TeamMember[] = [
   {
-    name: "Michael Thompson",
+    name: "Heshan Perera",
     position: "Head of CTF",
     image: alexImage,
     verified: false,
     socialLinks: [
       {
-          platform: 'linkedin', url: 'https://linkedin.com/in/michael',
+          platform: 'linkedin', url: 'https://lk.linkedin.com/in/heshan-perera-549273218',
           type: undefined
       },
       {
-          platform: 'twitter', url: 'https://twitter.com/michael',
+          platform: 'twitter', url: 'https://twitter.com/',
           type: undefined
       },
-      {
-          platform: 'github', url: 'https://github.com/michael',
-          type: undefined
-      }
     ]
   },
   {
-    name: "Emily Johnson",
+    name: "Sachintha Fernando",
     position: "Senior CTF Engineer",
     image: alexImage,
     verified: false,
     socialLinks: [
       {
-          platform: 'linkedin', url: 'https://linkedin.com/in/emily',
+          platform: 'linkedin', url: 'https://lk.linkedin.com/in/sachintha-fernando-95b290258',
           type: undefined
       },
       {
-          platform: 'twitter', url: 'https://twitter.com/emily',
+          platform: 'twitter', url: 'https://twitter.com/',
           type: undefined
       },
-      {
-          platform: 'github', url: 'https://github.com/emily',
-          type: undefined
-      }
     ]
   },
   {
-    name: "David Kim",
+    name: "Sample Name1",
     position: "CTF Engineer",
     image: alexImage,
     verified: false,
@@ -118,7 +106,7 @@ export const technicalTeam: TeamMember[] = [
     ]
   },
   {
-    name: "Lisa Wang",
+    name: "Sample Name2",
     position: "Web Developer",
     image: alexImage,verified: false,
     socialLinks: [
