@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import  ProfileCard from '../components/ui/Card'; // Make sure this is the correct import
-import { FaCode, FaShieldAlt, FaUsers, FaHeart } from 'react-icons/fa';
+import { FaUsers, FaHeart } from 'react-icons/fa';
 import { topManagement, technicalTeam } from '../data/teamData';
 import { stats } from '../data/statsData';
 import { values } from '../data/valuesData';

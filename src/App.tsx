@@ -1,11 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Hero from './components/sections/HeroSection'
-import PartnershipsSection from './components/sections/PartnershipsSection'
-import SliderSection from './components/sections/SliderSection'
-import SponsorsSection from './components/sections/SponsorsSection'
-import StatsSection from './components/sections/StatsSection'
 import NavBar from './components/ui/NavBar'
 import About from './pages/About'
+import Home from './pages/Home';
 
 function App() {
  
@@ -16,11 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Hero />
-              <SliderSection />
-              <PartnershipsSection />
-              <SponsorsSection />
-              <StatsSection />
+              <Home />
             </>
           } />
           <Route path="/about" element={<About />} />
