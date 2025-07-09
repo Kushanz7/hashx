@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# Website Preview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This README showcases the main pages of our website through video screenshots and demonstrations.
 
-Currently, two official plugins are available:
+## 🏠 Home Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Our home page provides visitors with a welcoming introduction to our company and services.
 
-## Expanding the ESLint configuration
+### Video Screenshot
+![Home Page Demo](./screenshots/home-page-demo.gif)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*Alternative static screenshot:*
+![Home Page Screenshot](./screenshots/home-page.png)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Key Features
+- Hero section with compelling call-to-action
+- Services overview
+- Latest news and updates
+- Contact information
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📖 About Us Page
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Learn more about our company's mission, vision, and values.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Video Screenshot
+![About Us Page Demo](./screenshots/about-us-demo.gif)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*Alternative static screenshot:*
+![About Us Screenshot](./screenshots/about-us.png)
+
+### Content Highlights
+- Company history and background
+- Mission and vision statements
+- Core values and principles
+- Company achievements and milestones
+
+---
