@@ -1,10 +1,5 @@
 // Import team member images
-import alexImage from '../assets/team/1-4.png';
-import sarahImage from '../assets/team/1-7.png';
-import michaelImage from '../assets/team/1-6.png';
-import emilyImage from '../assets/team/SF.png';
-import davidImage from '../assets/team/SF.png';
-import lisaImage from '../assets/team/SF.png';
+import alexImage from '../assets/team/pro.jpg';
 
 export interface SocialLink {
   type: any;
@@ -35,17 +30,13 @@ export const topManagement: TeamMember[] = [
       {
           platform: 'twitter', url: 'https://twitter.com/alex',
           type: undefined
-      },
-      {
-          platform: 'github', url: 'https://github.com/alex',
-          type: undefined
       }
     ]
   },
   {
     name: "Sarah Chen",
     position: "Managing Partner",
-    image: sarahImage,
+    image: alexImage,
     verified: false,
     socialLinks: [
       {
@@ -69,7 +60,7 @@ export const technicalTeam: TeamMember[] = [
   {
     name: "Michael Thompson",
     position: "Head of CTF",
-    image: michaelImage,
+    image: alexImage,
     verified: false,
     socialLinks: [
       {
@@ -89,7 +80,7 @@ export const technicalTeam: TeamMember[] = [
   {
     name: "Emily Johnson",
     position: "Senior CTF Engineer",
-    image: emilyImage,
+    image: alexImage,
     verified: false,
     socialLinks: [
       {
@@ -109,7 +100,7 @@ export const technicalTeam: TeamMember[] = [
   {
     name: "David Kim",
     position: "CTF Engineer",
-    image: davidImage,
+    image: alexImage,
     verified: false,
     socialLinks: [
       {
@@ -129,7 +120,7 @@ export const technicalTeam: TeamMember[] = [
   {
     name: "Lisa Wang",
     position: "Web Developer",
-    image: lisaImage,verified: false,
+    image: alexImage,verified: false,
     socialLinks: [
       {
           platform: 'linkedin', url: 'https://linkedin.com/in/lisa',

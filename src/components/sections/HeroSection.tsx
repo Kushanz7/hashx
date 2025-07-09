@@ -58,10 +58,10 @@ const Hero = () => {
 
           <TextGenerateEffect
             words="Sri Lanka's #1 CTF Platform"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl text-white mb-4 font-tektur"
+            className="text-center text-[40px] md:text-5xl lg:text-6xl text-white mb-4 font-mono"
           />
 
-          <p className="text-center md:tracking-wide mb-6 text-base md:text-xl lg:text-xl text-gray-300 max-w-5xl leading-relaxed px-4 font-tektur">
+          <p className="font-mono text-center md:tracking-wide mb-6 text-base md:text-xl lg:text-xl text-gray-300 max-w-5xl leading-relaxed px-4 font-tektur">
             HashX hosts Sri Lanka's #1 CTF platform, offering unparalleled hands-on experience with the latest cybersecurity challenges. We have successfully organized events for most major institutions, empowering participants with practical skills in a competitive environment. Join us to sharpen your expertise and stay ahead in the cybersecurity domain.
           </p>
 
